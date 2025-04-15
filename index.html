@@ -103,15 +103,15 @@
                     <a>ihavemorevision</a>
                 </div>
 
-                <div class="status">
-                    <a id="typewriter" class="typewriter"></a>
-                </div>
-
                 <div class="badges-container">
                     <div class="badges">
 
                         <div class="tooltip" data-text="Premium">
                             <img class="diamond" src="https://media.discordapp.net/attachments/1357400114943234192/1361750881019629658/Xq3Fus0.png?ex=67ffe4d6&is=67fe9356&hm=000d6a7e03ec716153e3b50a9adb916e6d8ccceeadcddbd87734a42342b13f9d&=&format=webp&quality=lossless">
+                        </div>
+
+                        <div class="tooltip" data-text="First Buyer">
+                            <img class="Tick" src="https://media.discordapp.net/attachments/1357400114943234192/1361753308133458102/6wd5ylU.png?ex=67ffe718&is=67fe9598&hm=cf768d831f97ad0e52d3c65f2a83aa384613e69f2eab570bf80e22bf2ee96850&=&format=webp&quality=lossless">
                         </div>
 
                     </div>
@@ -173,42 +173,6 @@
         audio.muted = false;
         audio.play();
     });
-</script>
-
-<script>
-    var txt = '';
-    var speed = 70;
-    var eraseSpeed = 80;
-    var loopCount = 0;
-    var maxLoop = 0;
-    var forward = true;
-
-    function typeWriter() {
-        var typewriter = document.getElementById("typewriter");
-        var textLength = txt.length;
-
-        if (forward) {
-            if (typewriter.innerHTML.length < textLength) {
-                typewriter.innerHTML += txt.charAt(typewriter.innerHTML.length);
-                setTimeout(typeWriter, speed);
-            } else {
-                forward = false;
-                setTimeout(typeWriter, speed * 3);
-            }
-        } else {
-            if (typewriter.innerHTML.length > 0) {
-                typewriter.innerHTML = typewriter.innerHTML.slice(0, -1);
-                setTimeout(typeWriter, eraseSpeed);
-            } else {
-                forward = true;
-                setTimeout(typeWriter, speed * 3);
-            }
-        }
-    }
-
-    window.onload = function() {
-        typeWriter();
-    };
 </script>
 
 <script>
